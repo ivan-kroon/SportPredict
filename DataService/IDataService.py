@@ -9,5 +9,5 @@ class IDataService(ABC):
         pass
     
     @abstractmethod
-    def GetData(self, key: str) -> CustomWeatherData:
+    def GetData(self, key: str):
         pass

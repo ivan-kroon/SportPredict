@@ -17,8 +17,6 @@ class OpenWeatherProcessWeatherData(ProcessWeatherData):
         longitute = stadionLocationMap[key].longitute
         querystring = {f"lat": f"{latitude}", f"lon": f"{longitute}", "cnt":"1"}
 
-        # "cnt":"1", "mode":"null","lon":"0","type":"link, accurate","lat":"0","units":"imperial, metric"
-
         response = requests.request("GET", serviceUrl, headers=headers, params=querystring)
 
         weatherData = json.loads(response.text)

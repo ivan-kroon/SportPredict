@@ -12,7 +12,6 @@ class RedisDataService(IDataService):
         self.redis_host = "localhost"
         self.redis_port = 6379
         self.redis_password = ""
-        # return redis.StrictRedis(host=self.redis_host, port=self.redis_port, password=self.redis_password, decode_responses=True)
 
     def SetData(self, key: str, data: CustomWeatherData):
         try:
